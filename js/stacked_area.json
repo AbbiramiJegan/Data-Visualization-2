@@ -1,0 +1,57 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 300,
+    "data": {
+      "values": [
+        {"State": "Johor", "Assault": 24966, "Property": 96300},
+        {"State": "Kedah", "Assault": 12924, "Property": 64312},
+        {"State": "Kelantan", "Assault": 7004, "Property": 39704},
+        {"State": "Melaka", "Assault": 8036, "Property": 25010},
+        {"State": "Negeri Sembilan", "Assault": 9832, "Property": 33162},
+        {"State": "Pahang", "Assault": 7374, "Property": 33646},
+        {"State": "Perak", "Assault": 13698, "Property": 47862},
+        {"State": "Perlis", "Assault": 1462, "Property": 5898},
+        {"State": "Pulau Pinang", "Assault": 13564, "Property": 52534},
+        {"State": "Sabah", "Assault": 8080, "Property": 61574},
+        {"State": "Sarawak", "Assault": 10960, "Property": 67222},
+        {"State": "Selangor", "Assault": 65810, "Property": 221622},
+        {"State": "Terengganu", "Assault": 4140, "Property": 23088},
+        {"State": "W.P. Kuala Lumpur", "Assault": 36562, "Property": 109760}
+      ]
+    },
+    "transform": [
+      {
+        "fold": ["Assault", "Property"],  
+        "as": ["Crime Type", "Count"]
+      }
+    ],
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "field": "State",
+        "type": "ordinal",
+        "axis": {"title": "State"}
+      },
+      "y": {
+        "field": "Count",
+        "type": "quantitative",
+        "stack": "zero",  
+        "axis": {"title": "Number of Crimes"}
+      },
+      "color": {
+        "field": "Crime Type",
+        "scale": {"scheme": "category10"},  
+        "title": "Type of Crime"
+      },
+      "opacity": {
+        "value": 0.7  
+      },
+      "tooltip": [
+        {"field": "State", "type": "ordinal", "title": "State"},
+        {"field": "Crime Type", "type": "nominal", "title": "Crime Type"},
+        {"field": "Count", "type": "quantitative", "title": "Number of Crimes"}
+      ]  
+    }
+  }
+  
