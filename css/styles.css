@@ -1,6 +1,5 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: lightgray;
   display: flex;                /* Enable Flexbox for body */
   justify-content: center;      /* Center horizontally */
   align-items: center;          /* Center vertically */
@@ -8,62 +7,63 @@ body {
 }
 
 .page {
-  background-color: white;
   padding: 50px;
   text-align: center;           /* Center text within the page */
   border-radius: 10px;         /* Optional rounded corners */
 }
 
-.content-wrapper {
-  display: flex;                /* Enable Flexbox for content */
-  flex-direction: column;       /* Stack children vertically */
-  justify-content: space-between; /* Equal spacing between children */
-  align-items: center;          /* Center items horizontally */
-}
-
 h1 {
   font-weight: 900;
   margin: 0 0 10px;            /* Adjust bottom margin */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 4rem;
 }
 
 .subtitle {
   margin: 0 0 20px;            /* Adjust bottom margin */
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.vis-container1 {
-  width: 50%;                   /* Set a width for the visualization */
-  height: 320px;               /* Specify height for the visualization */
-  margin: 10px 0;              /* Equal vertical margin */
+.content-wrapper {
+  display: flex;                  
+  flex-direction: row;   
+  text-align: center;
 }
 
-.vis-container2 {
-  width: 50%;                   /* Set a width for other visualizations */
-  height: 400px;               /* Specify height */
-  margin: 50px 0;              /* Equal vertical margin */
-}
-
-.vis-container3 {
-  width: 50%;                   /* Set a width for the element */
-  height: 500px;                /* Specify height */
-  margin: 50px 0;               /* Equal vertical margin */
-  margin-left: 600px;            /* Push the element to the right */
+.visualization1 {
+  width: 100%;                   /* Set a width for the visualization */
+  height: 520px;               /* Specify height for the visualization */
+  display: flex;                /* Enable Flexbox */
+  justify-content: center;      /* Center content inside the container */
+  align-items: center;          /* Center items vertically */
+  text-align: center;
 }
 
 .description-right {
-  width: 50%;                   /* Set a width for the description */
-  margin: 20px 0;              /* Equal vertical margin */
-  height: 80%;
+  padding-top: 30px;
+  padding-right: 30px;
+  width: 15%;                   /* Set a width for the description */
+  height: 30%;
   text-align: right;
+  margin-left: 80px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.vis-container2 {
+  margin-left: 285px;
+  margin-top: 20px;
 }
 
 .description-left {
-  width: 50%;
-  height: 80%;
-  text-align: left;
+  padding-left: 320px;
+  width: 15%;                     /* Take half of the container's width */
+  height: 30%;                    /* Set desired height */
+  text-align: left;               /* Align text to the left */
+  margin-top: 50px;              /* Add space at the top */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.heading {
-  text-align: right;
-  height: 150px;
+.vis-container3 {
+  margin-top: 100px;
+  margin-left: 50px;
 }
-
