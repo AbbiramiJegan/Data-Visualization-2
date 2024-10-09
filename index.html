@@ -26,7 +26,6 @@
 <body>
   <div id="header">
     <div class="container">
-      
     </div>
   </div>
   <div class="page">
@@ -37,45 +36,46 @@
         <p class="subtitle"><i>An Analysis of Crime Trends and Patterns Across Various Regions in Malaysia.</i></p>
       </div>
     </div>
-<br>
+    <br>
     <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis1" class="vis-container1"></div>
+    <div>
+      <div>
+        <div id="vis1" class="visualization1"></div>
       </div>
     </div>
     <!-- end pure grid group -->
 
-    <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis2" class="vis-container2"></div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="description-right">
-          <h2 class="heading">Safety comparison in popular Malaysian cities.</h2>
-          <p>The scatter plot highlights the safety levels in popular Malaysian cities, with <b>Tawau</b> showing the lowest
-            safety rates during both day and night. <br><br>In contrast, <b>Kangar</b> has the highest safety level at night, while <b>Labuan</b> 
-            records the highest safety level during the day.</p>
-        </div>
+    <div class="content-wrapper">
+      <div id="vis2" class="vis-container2"></div>
+      <div class="description-right">
+        <h2>Safety comparison in popular Malaysian cities.</h2>
+        <p>The scatter plot highlights the safety levels in popular Malaysian cities, with <b>Tawau</b> showing the
+          lowest
+          safety rates during both day and night. <br><br>In contrast, <b>Kangar</b> has the highest safety level at
+          night, while <b>Labuan</b>
+          records the highest safety level during the day.</p>
+        <!-- Adding the policecar.gif within the description -->
+        <a href="https://www.animatedimages.org/cat-police-cars-1449.htm">
+          <img src="https://www.animatedimages.org/data/media/1449/animated-police-car-image-0015.gif" border="0" alt="animated-police-car-image-0015" style="width:300px;height:auto;" />
+        </a>
+        
+        
       </div>
     </div>
 
     <!-- pure grid group -->
-    <div class="pure-g reverse-layout">
-      <div class="pure-u-2-3">
-        <div id="vis3" class="vis-container3"></div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="description-left">
-          <h2>Vehicle Theft Patterns in Malaysia</h2>
-          <p><b>Lorries represent the least number of thefts,</b> followed by <b>cars</b>, while <b>motorcycles have the highest incidence of theft.</b><br><br>
-            This pattern indicates a need for <b>targeted security measures,</b> particularly for <b>motorcycles</b>, which are disproportionately 
-            affected.</p>
-        </div>
-      </div>
-    </div>
-    <!-- end pure grid group -->
 
+    <div class="content-wrapper">
+      <div class="description-left">
+        <h2>Vehicle Theft Patterns in Malaysia</h2>
+        <p><b>Lorries represent the least number of thefts,</b> followed by <b>cars</b>, while <b>motorcycles have the
+          highest incidence of theft.</b><br><br>
+        This pattern indicates a need for <b>targeted security measures,</b> particularly for <b>motorcycles</b>,
+        which are disproportionately
+        affected.</p>
+      </div>
+      <div id="vis3" class="vis-container3"></div>
+    </div>
 
   </div> <!-- end page -->
 
