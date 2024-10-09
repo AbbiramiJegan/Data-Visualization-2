@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 900,
-  "height": 420,
+  "width": 1500,
+  "height": 620,
   "title": "Telecommunication Fraud Trends Across Regions (2020)",
-  "projection": {"type": "mercator", "scale": 2470, "rotate": [250, -3.5]},
+  "projection": {"type": "mercator", "scale": 4000, "rotate": [250, -3.5]},
   "layer": [
     {
       "data": {
@@ -45,7 +45,7 @@
           "field": "Cases",
           "type": "quantitative",
           "title": "Number of cases",
-          "scale": {"domain": [1, 400]},
+          "scale": {"domain": [1, 200]},
           "legend": null
         },
         "tooltip": [
@@ -64,7 +64,7 @@
           }
         ]
       },
-      "mark": {"type": "text", "fontSize": 14, "color": "black"},
+      "mark": {"type": "text", "fontSize": 18, "color": "black"},
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
@@ -81,7 +81,7 @@
           }
         ]
       },
-      "mark": {"type": "text", "fontSize": 14, "color": "black"},
+      "mark": {"type": "text", "fontSize": 18, "color": "black"},
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
@@ -98,7 +98,7 @@
           }
         ]
       },
-      "mark": {"type": "text", "fontSize": 14, "color": "black"},
+      "mark": {"type": "text", "fontSize": 18, "color": "black"},
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
@@ -110,12 +110,12 @@
         "values": [
           {
             "longitude": 116,
-            "latitude": -0.2,
+            "latitude": 0.5,
             "text": "Richer states tend to have better internet access and hardware"
           }
         ]
       },
-      "mark": {"type": "text", "fontSize": 14, "color": "black"},
+      "mark": {"type": "text", "fontSize": 18, "color": "black"},
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
@@ -126,13 +126,13 @@
       "data": {
         "values": [
           {
-            "longitude": 114.8,
-            "latitude": -0.8,
+            "longitude": 114.99,
+            "latitude": -0.2,
             "text": "for online transactions, increasing their vulnerability to telecommunication fraud."
           }
         ]
       },
-      "mark": {"type": "text", "fontSize": 14, "color": "black"},
+      "mark": {"type": "text", "fontSize": 18, "color": "black"},
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
