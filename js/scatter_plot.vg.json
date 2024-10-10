@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "height": 495,
-  "width": 495,
+  "height": 695,
+  "width": 695,
   "title": "Safety in Popular Cities in Malaysia",
   "data": {
     "url": "https://raw.githubusercontent.com/AbbiramiJegan/Homework-10/refs/heads/main/data/Safety%20in%20Malaysia.csv",
@@ -30,10 +30,14 @@
       "filter": "regionFilter == null || datum.Region == regionFilter"
     }
   ],
-  "padding": { "top": 20, "bottom": 30, "left": 10, "right": 10 },  
+  "padding": { "top": 20, "bottom": 30, "left": 10, "right": 10 },
+  "background": "bisque",  
   "layer": [
     {
-      "mark": "point",
+      "mark": {
+        "type": "point",
+        "size": 500
+      },
       "encoding": {
         "x": {
           "field": "Daylight Safety",
@@ -50,7 +54,7 @@
         "y": {
           "field": "Night Safety",
           "type": "quantitative",
-          "title": "Night Safety",
+          "title": "Night Safety", 
           "axis": {
             "tickCount": 10
           },

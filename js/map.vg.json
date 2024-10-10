@@ -4,6 +4,7 @@
   "height": 620,
   "title": "Telecommunication Fraud Trends Across Regions (2020)",
   "projection": {"type": "mercator", "scale": 4000, "rotate": [250, -3.5]},
+  "background": "bisque",  
   "layer": [
     {
       "data": {

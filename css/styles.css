@@ -10,6 +10,7 @@ body {
   padding: 50px;
   text-align: center;           /* Center text within the page */
   border-radius: 10px;         /* Optional rounded corners */
+  background-color: bisque;
 }
 
 h1 {
@@ -37,11 +38,12 @@ h1 {
   justify-content: center;      /* Center content inside the container */
   align-items: center;          /* Center items vertically */
   text-align: center;
+  margin-top: 50px;
 }
 
 .description-right {
-  padding-top: 30px;
-  padding-right: 30px;
+  margin-top: 5%;
+  padding-left: 50px;
   width: 15%;                   /* Set a width for the description */
   height: 30%;
   text-align: right;
@@ -50,8 +52,8 @@ h1 {
 }
 
 .vis-container2 {
-  margin-left: 285px;
-  margin-top: 20px;
+  margin-left: 80px;
+  margin-top: 80px;
 }
 
 .description-left {
