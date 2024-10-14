@@ -1,0 +1,104 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A donut chart showing crime statistics by type in the selected state.",
+  "width": 600,
+  "height": 400,
+  "title": {
+    "text": "Crime Statistics in the Selected State",
+    "color": "#000000",
+    "font": "Garamond",
+    "fontSize": 25
+  },
+  "data": {
+    "values": [
+      {"State": "Johor", "Assault": 24966, "Property": 96300},
+      {"State": "Kedah", "Assault": 12924, "Property": 64312},
+      {"State": "Kelantan", "Assault": 7004, "Property": 39704},
+      {"State": "Melaka", "Assault": 8036, "Property": 25010},
+      {"State": "Negeri Sembilan", "Assault": 9832, "Property": 33162},
+      {"State": "Pahang", "Assault": 7374, "Property": 33646},
+      {"State": "Perak", "Assault": 13698, "Property": 47862},
+      {"State": "Perlis", "Assault": 1462, "Property": 5898},
+      {"State": "Pulau Pinang", "Assault": 13564, "Property": 52534},
+      {"State": "Sabah", "Assault": 8080, "Property": 61574},
+      {"State": "Sarawak", "Assault": 10960, "Property": 67222},
+      {"State": "Selangor", "Assault": 65810, "Property": 221622},
+      {"State": "Terengganu", "Assault": 4140, "Property": 23088},
+      {"State": "W.P. Kuala Lumpur", "Assault": 36562, "Property": 109760}
+    ]
+  },
+  "params": [
+    {
+      "name": "state_selection",
+      "value": "Johor",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Johor",
+          "Kedah",
+          "Kelantan",
+          "Melaka",
+          "Negeri Sembilan",
+          "Pahang",
+          "Perak",
+          "Perlis",
+          "Pulau Pinang",
+          "Sabah",
+          "Sarawak",
+          "Selangor",
+          "Terengganu",
+          "W.P. Kuala Lumpur"
+        ],
+        "name": "Choose a State: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "fold": ["Assault", "Property"],
+      "as": ["Crime Type", "Count"]
+    },
+    {
+      "filter": "datum.State == state_selection"  
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "Count",
+          "as": "Total Count"
+        }
+      ],
+      "groupby": ["Crime Type"]
+    }
+  ],
+  "mark": {
+    "type": "arc",
+    "innerRadius": 50,
+    "tooltip": true
+  },
+  "encoding": {
+    "theta": {
+      "field": "Total Count",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Crime Type",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Assault", "Property"],
+        "range": ["#7881ff", "#ff7f78"]
+      },
+      "legend": {
+        "labelColor": "black",
+        "titleColor": "black",
+        "titleFont": "Garamond",
+        "labelFont": "Garamond"
+      }
+    },
+    "tooltip": [
+      {"field": "Crime Type", "type": "nominal", "title": "Crime Type"},
+      {"field": "Total Count", "type": "quantitative", "title": "Total Crimes"}
+    ]
+  }
+}
