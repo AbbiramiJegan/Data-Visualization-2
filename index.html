@@ -18,71 +18,63 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-  <div id="header">
-    <div class="container">
+
+
+  <header>
+    <h1>Crime Rates in Malaysia</h1>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item mx-5">
+            <a class="nav-link" aria-current="page" href="vis1">Crime Map</a>
+          </li>
+          <li class="nav-item mx-5">
+            <a class="nav-link" href="vis2">Day/Night Safety</a>
+          </li>
+          <li class="nav-item mx-5">
+            <a class="nav-link" href="vis3">Vehicle Theft Types</a>
+          </li>
+          <li class="nav-item mx-5">
+            <a class="nav-link" href="vis4">State Assault & Property</a>
+          </li>
+          <li class="nav-item mx-5">
+            <a class="nav-link" href="vis5">Crime Types</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <div class="container-xl">
+    <div id="vis1"></div>
   </div>
-  <div class="page">
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1">
-        <h1>Crime Rates in Malaysia</h1><br>
-        <p class="subtitle"><i>An Analysis of Crime Trends and Patterns Across Various Regions in Malaysia.</i></p>
-      </div>
-    </div>
-    <br>
-    <!-- pure grid group -->
-    <div>
-      <div>
-        <div id="vis1" class="visualization1"></div>
-      </div>
-    </div>
-    <!-- end pure grid group -->
 
-    <div class="content-wrapper">
-      <div id="vis2" class="vis-container2"></div>
-      <div class="description-right">
-        <h2>Safety comparison in popular Malaysian cities.</h2>
-        <p>The scatter plot highlights the safety levels in popular Malaysian cities, with <b>Tawau</b> showing the
-          lowest
-          safety rates during both day and night. <br><br>In contrast, <b>Kangar</b> has the highest safety level at
-          night, while <b>Labuan</b>
-          records the highest safety level during the day.</p>
-        <!-- Adding the policecar.gif within the description -->
-        <a href="https://www.animatedimages.org/cat-police-cars-1449.htm">
-          <img src="https://www.animatedimages.org/data/media/1449/animated-police-car-image-0015.gif" border="0" alt="animated-police-car-image-0015" style="width:300px;height:auto;" />
-        </a>
-        
-        
-      </div>
-    </div>
 
-    <!-- pure grid group -->
-
-    <div class="content-wrapper">
-      <div class="description-left">
-        <h2>Vehicle Theft Patterns in Malaysia</h2>
-        <p><b>Lorries represent the least number of thefts,</b> followed by <b>cars</b>, while <b>motorcycles have the
-          highest incidence of theft.</b><br><br>
-        This pattern indicates a need for <b>targeted security measures,</b> particularly for <b>motorcycles</b>,
-        which are disproportionately
-        affected.</p>
-      </div>
-      <div id="vis3" class="vis-container3"></div>
-    </div>
-
-  </div> <!-- end page -->
-
+  <footer></footer>
   <script type="text/javascript">
     var specVis1 = "js/map.vg.json";
     var specVis2 = "js/scatter_plot.vg.json";
     var specVis3 = "js/trellis_area.json"
+    var specVis4 = "js/radial_plot.json"
+    var specVis5 = "js/donut_chart.json"
 
     vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
       // Access the Vega view instance as result.view
@@ -93,6 +85,14 @@
     }).catch(console.error);
 
     vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
       // Access the Vega view instance as result.view
     }).catch(console.error);
   </script>
