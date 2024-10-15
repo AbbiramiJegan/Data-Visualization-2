@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "The number of vehicle thefts by type over the years as small multiples of area charts.",
   "data": {
     "url": "https://raw.githubusercontent.com/AbbiramiJegan/Data-Visualization-2/refs/heads/main/data/Vehicle%20Theft.csv"
   },
@@ -10,10 +9,10 @@
       "as": "symbol"
     }
   ],
-  "width": 550,
-  "height": 100,
+  "width": 500,
+  "height": 120,
   "mark": "area",
-  "background": "bisque",
+  "background": "#fdf0d5",
   "encoding": {
     "x": {
       "field": "year",
