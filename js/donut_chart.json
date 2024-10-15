@@ -87,8 +87,10 @@
       "legend": {
         "labelColor": "black",
         "titleColor": "black",
-        "titleFont": "Garamond",
-        "labelFont": "Garamond"
+        "titleFont": "Times New Roman",
+        "labelFont": "Times New Roman",
+        "labelFontSize": 20,
+        "titleFontSize": 20
       }
     },
     "tooltip": [
