@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A donut chart showing crime statistics by type in the selected state.",
   "background": "#fdf0d5",
-  "width": 1000,
-  "height": 500,
+  "width": 400,
+  "height": 400,
   "data": {
     "values": [
       {"State": "Johor", "Assault": 24966, "Property": 96300},
