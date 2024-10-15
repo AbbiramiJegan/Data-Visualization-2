@@ -31,7 +31,7 @@
 
 <body style="background-color: #fdf0d5;">
   <header>
-    <h1> 🔪 Crime Rates in Malaysia 👮</h1>
+    <h1> 🚔 Crime Rates in Malaysia 🚔</h1>
   </header>
 
   <nav class="navbar navbar-expand-lg navbar-dark">
@@ -46,16 +46,16 @@
             <a class="nav-link" href="#heading1" style="color: #fdf0d5;">Crime Map</a>
           </li>
           <li class="nav-item mx-5">
-            <a class="nav-link" href="#heading2">Day/Night Safety</a>
+            <a class="nav-link" href="#heading2" style="color: #fdf0d5;">Day/Night Safety</a>
           </li>
           <li class="nav-item mx-5">
-            <a class="nav-link" href="#heading3">Vehicle Theft Types</a>
+            <a class="nav-link" href="#heading3" style="color: #fdf0d5;">Vehicle Theft Types</a>
           </li>
           <li class="nav-item mx-5">
-            <a class="nav-link" href="#heading4">State Assault & Property</a>
+            <a class="nav-link" href="#heading4" style="color: #fdf0d5;">State Assault & Property</a>
           </li>
           <li class="nav-item mx-5">
-            <a class="nav-link" href="#heading5">Crime Types</a>
+            <a class="nav-link" href="#heading5" style="color: #fdf0d5;">Crime Types</a>
           </li>
         </ul>
       </div>
@@ -79,22 +79,18 @@
   <div class="container-xl">
     <div id="vis1"></div>
   </div>
+  <br>
+  <p>In 2020, <b>telecommunication fraud</b> surged in <b>wealthier regions</b> of Malaysia, particularly in areas like <b>Selangor</b> and <b>Kuala Lumpur</b>. <br>These regions, known for their robust <b>internet infrastructure</b> and widespread adoption of <b>digital transactions</b>, became prime targets for <b>fraudsters</b>.<br> Fraud schemes, including <b>phishing</b> and <b>social engineering</b> attacks, capitalized on the increasing reliance on online services, leading to significant <b>financial losses</b>.<br>
 
   <br>
-  <br>
-  <h2 id="heading2" class="subtitle">Safety in popular cities in Malaysia</h2>
-  <div class="flex-container" style="display: flex; flex-wrap: wrap;">
-    <div id="vis2" style="flex: 0 1 60%; padding: 50px;"></div>
-    <div style="flex: 0 2 30%; padding: 0px;">
-      <br>
-      <p>❓ How to Read the Scatterplot <br><br>
-        <li> The X-axis shows Daylight Safety scores (0-100), while the Y-axis indicates Night Safety scores
-        (0-100).</li><br><br>
-        <li> Each point represents a city, positioned based on its safety ratings for daylight and night.</li><br><br>
-        <li> Different colors represent various cities, facilitating comparisons across regions.</li><br><br>
-        <li> Hover over a point to see details about the city, including its name and safety scores.</li><br><br>
-      </p>
-    </div>
+  <h2 id="heading4" class="subtitle">Day / Night Safety in Malaysian Cities</h2>
+  <div class="flex-container" style="display: flex; flex-wrap: wrap; flex-direction: row; padding: 40px;">
+    <div id="vis2" style="flex: 0 1 60%; padding-left: 60px; padding-top: 35px;"></div> 
+    <div class="card" style="flex: 0 1 40%; padding: 2em; margin-top: 100px; background-color: #fdf0d5;"> 
+      <p><b>Safety</b> perceptions in Malaysia shift between <b>day</b> and <b>night</b>.<br><br>
+         Cities like <b>Kuala Lumpur</b> and <b>Johor Bahru</b> see a noticeable drop in safety after dark, while <b>George Town</b>, <b>Putrajaya</b>, and <b>Labuan</b> maintain higher safety levels both day and night.<br><br>
+          Efforts like <b>better lighting</b> and <b>police patrols</b> aim to enhance night safety across these cities.</p>
+    </div> 
   </div>
   
   <br>
@@ -116,44 +112,39 @@
   <div class="flex-container" style="display: flex; flex-wrap: wrap; flex-direction: row; padding: 40px;">
     <div id="vis4" style="flex: 0 1 60%; padding-left: 120px; padding-top: 35px;"></div> 
     <div class="card" style="flex: 0 1 40%; padding: 2em; margin-top: 40px; background-color: #fdf0d5;"> 
-      <p>From 2016 to 2022, <b>vehicle thefts</b> in Malaysia showed a consistent decline across all types.</br></br>
-        <b>Motorcycle thefts</b> saw the steepest drop, from <b>34,754 cases</b> in 2016 to <b>10,457</b> in 2022.
-        <b>Motorcar thefts</b> also significantly decreased, from <b>10,607</b> to <b>3,271</b> over the same period. 
-        <b>Lorry thefts</b> followed a similar trend, dropping from <b>3,050</b> to <b>718</b>.</br></br>This suggests improved 
-        <b>vehicle security</b> or <b>law enforcement</b> over time.</p>
+      <p>Between 2016 and 2022, Malaysia saw a <b>decline in most major crimes</b>.<br><br> <b>Assaults</b> decreased from <b>5,531</b> to <b>3,807</b>, and <b>homicides</b> dropped from <b>456</b> to <b>240</b>, indicating improved public safety.<br><br> <b>Robberies</b> showed mixed trends, with <b>armed gang robberies</b> declining sharply, while <b>unarmed gang robberies</b> fell more slowly.<br><br> <b>Burglary</b> rates decreased from <b>18,760</b> to <b>10,585</b>, and <b>thefts</b> dropped from <b>22,857</b> to <b>15,434</b>.
     </div> 
   </div>
   
-  <h2 id="heading5" class="subtitle">Yearly Trends in Crime Type</h2>
+  <h2 id="heading5" class="subtitle">Assault vs Property Crime Trends by State</h2>
   <div class="flex-container" style="display: flex; flex-wrap: wrap; flex-direction: row-reverse; padding: 40px;">
-    <div id="vis5" style="flex: 0 1 60%; padding-left: 170px; padding-top: 35px;"></div>
-    <div class="card" style="flex: 0 1 40%; padding: 2em; margin-top: 40px; background-color: #fdf0d5;"> 
-      <p>From 2016 to 2022, <b>vehicle thefts</b> in Malaysia showed a consistent decline across all types.</br></br>
-        <b>Motorcycle thefts</b> saw the steepest drop, from <b>34,754 cases</b> in 2016 to <b>10,457</b> in 2022.
-        <b>Motorcar thefts</b> also significantly decreased, from <b>10,607</b> to <b>3,271</b> over the same period. 
-        <b>Lorry thefts</b> followed a similar trend, dropping from <b>3,050</b> to <b>718</b>.</br></br>This suggests improved 
-        <b>vehicle security</b> or <b>law enforcement</b> over time.</p>
+    <div id="vis5" style="flex: 0 1 60%; padding-left: 300px; padding-top: 40px;"></div>
+    <div class="card" style="flex: 0 1 40%; padding: 1em; margin-top: 40px; background-color: #fdf0d5;"> 
+      <p>In examining crime rates across states, Selangor stands out with the highest assault cases at <b>65,810</b> and an alarming property crime count of <b>221,622</b>.<br><br>
+        W.P. Kuala Lumpur follows with significant figures of <b>36,562</b> assaults and <b>109,760</b> property crimes, indicating urban challenges.<br><br>
+        In contrast, Perlis has the lowest assault cases at <b>1,462</b> and property crimes at <b>5,898</b>, reflecting a relatively safer environment.<br><br>
+        Overall, assault incidents appear to be concentrated in urban areas, while property crimes dominate across most states.</p>
     </div>
   </div>
 
   <br><br>
-  <p class="my">
-    <br />
-    <br />
-    <br />
-    &copy; 2024 Abbirami Jegan. Copyright reserved.
-    <br />
-    <span style="font-size: smaller;">Datasets from <a href="https://www.numbeo.com/crime/country_result.jsp?country=Malaysia
-      ">Numbeo Crime Index - Malaysia</a>
-      , <a href="https://pqi.stats.gov.my/result.php?token=2d0988437a38d21ca0bbb8ace382801b">Malaysia's Crime Index Statistics</a>
-      & <a href="https://www.moha.gov.my/images/maklumat_bahagian/ipsom/jurnal/volume12/Vol_12_Num_2.pdf">Journal of Crime Statistics in Malaysia
-      </a>
-    </span>
-    <br />
-    <br />
-    <br />
+  <p class="my" style="text-align: center; font-family: 'Times New Roman', Times, serif;">
+      <br />
+      <br />
+      <br />
+      <strong>&copy; Oct 2024,  Abbirami Jegan. All rights reserved.</strong>
+      <br />
+      <span style="font-size: smaller;">Data sourced from:</span>
+      <span style="font-size: smaller;">
+          <a href="https://www.numbeo.com/crime/country_result.jsp?country=Malaysia" target="_blank">Numbeo Crime Index - Malaysia</a>,
+          <a href="https://pqi.stats.gov.my/result.php?token=2d0988437a38d21ca0bbb8ace382801b" target="_blank">Malaysia's Crime Index Statistics</a>, 
+          and <a href="https://www.moha.gov.my/images/maklumat_bahagian/ipsom/jurnal/volume12/Vol_12_Num_2.pdf" target="_blank">Journal of Crime Statistics in Malaysia</a>
+      </span>
+      <br />
+      <br />
+      <br />
   </p>
-
+  
   <script type="text/javascript">
     // Load the Vega visualizations
     var specVis1 = "js/map.vg.json";
