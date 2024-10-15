@@ -1,6 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A radial chart of crime types filtered by year with tooltips and a legend.",
+    "background": "#fdf0d5",
+    "width": 500,
+    "height": 420,
     "data": {
       "url": "https://raw.githubusercontent.com/AbbiramiJegan/Data-Visualization-2/main/data/Types%20of%20Crimes.csv"
     },
@@ -47,7 +50,7 @@
         "legend": {
           "title": "Type of Crime",
           "orient": "right",  
-          "fillColor": "#fff"  
+          "fillColor": "#fdf0d5"  
         }
       },
       "tooltip": [  
