@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1500,
-  "height": 620,
-  "projection": {"type": "mercator", "scale": 4000, "rotate": [250, -3.5]},
+  "width": 1200,
+  "height": 520,
+  "projection": {"type": "azimuthalEqualArea", "scale": 3440, "rotate": [250, -4.0]},
   "background": "#fdf0d5",
   "layer": [
     {
@@ -10,21 +10,21 @@
         "url": "https://raw.githubusercontent.com/AbbiramiJegan/Homework-9/main/ne_110m_admin_0_countries.topojson",
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
       },
-      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      "mark": {"type": "geoshape", "fill": null, "stroke": null}
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/AbbiramiJegan/Data-Visualization-2/refs/heads/main/malaysia_states.topojson",
-        "format": {"type": "topojson", "feature": "features"}
+        "url": "https://raw.githubusercontent.com/AbbiramiJegan/Data-Visualization-2/refs/heads/main/states.json",
+        "format": {"type": "topojson", "feature": "my (1)"}
       },
       "mark": {"type": "geoshape", "fill": null, "stroke": "black"}
     },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/AbbiramiJegan/Data-Visualization-2/refs/heads/main/ne_110m_graticules_5.topojson",
-        "format": {"type": "topojson", "feature": "graticules"}
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_5"}
       },
-      "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5}
+      "mark": {"type": "geoshape", "stroke": "lightgrey", "fill": null}
     },
     {
       "data": {
@@ -36,12 +36,13 @@
         {"calculate": "toNumber(datum.Longtitude)", "as": "Longitude"}
       ],
       "mark": {
-        "type": "square",
+        "type": "circle",    
         "tooltip": {"content": "data"},
         "fontSize": 12,
         "baseline": "middle",
         "align": "center",
-        "opacity": 0.5
+        "opacity": 0.7,
+        "color": "red"
       },
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
@@ -50,98 +51,20 @@
           "field": "Cases",
           "type": "quantitative",
           "title": "Number of cases",
-          "scale": {"domain": [1, 200]},
-          "legend": null
+          "scale": {"range": [200, 800]},
+          "legend": {
+            "orient": "top-right",
+            "title": "Crime Cases",
+            "labelColor" : "black",
+            "labelFont" : "Times New Roman",
+            "labelFontSize": 10,
+            "titleFontSize": 10
+          }
         },
         "tooltip": [
           {"field": "State", "type": "nominal", "title": "State"},
           {"field": "Cases", "type": "quantitative", "title": "Cases"}
         ]
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "longitude": 108.5,
-            "latitude": 6.5,
-            "text": "From January to September 2020, Selangor and Kuala Lumpur"
-          }
-        ]
-      },
-      "mark": {"type": "text", "fontSize": 18, "color": "black"},
-      "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"},
-        "text": {"field": "text"}
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "longitude": 108.5,
-            "latitude": 5.9,
-            "text": "reported the highest losses and case counts, totaling"
-          }
-        ]
-      },
-      "mark": {"type": "text", "fontSize": 18, "color": "black"},
-      "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"},
-        "text": {"field": "text"}
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "longitude": 108.5,
-            "latitude": 5.3,
-            "text": "RM256,863,878.35 (5,128 cases)."
-          }
-        ]
-      },
-      "mark": {"type": "text", "fontSize": 18, "color": "black"},
-      "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"},
-        "text": {"field": "text"}
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "longitude": 116,
-            "latitude": 0.5,
-            "text": "Richer states tend to have better internet access and hardware"
-          }
-        ]
-      },
-      "mark": {"type": "text", "fontSize": 18, "color": "black"},
-      "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"},
-        "text": {"field": "text"}
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "longitude": 114.99,
-            "latitude": -0.2,
-            "text": "for online transactions, increasing their vulnerability to telecommunication fraud."
-          }
-        ]
-      },
-      "mark": {"type": "text", "fontSize": 18, "color": "black"},
-      "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"},
-        "text": {"field": "text"}
       }
     }
   ]
